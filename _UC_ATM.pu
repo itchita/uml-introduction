@@ -4,10 +4,9 @@ actor 利用者 #AA0000;line:Pink;line.bold;
 package ATM {
 usecase 預金する
 usecase 預金を引き出す
-usecase 残高照会する
-usecase 通帳記入する
+usecase 残高照会
+usecase 通話履歴を見る
 }
-
 利用者 --> 預金する
 利用者 --> 預金を引き出す
 @enduml
