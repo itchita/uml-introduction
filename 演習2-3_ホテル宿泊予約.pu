@@ -1,0 +1,10 @@
+@startuml ユースケース図
+' left to right direction
+rectangle ホテル{
+actor 利用者    
+usecase ログイン
+usecase 予約
+}
+予約 <-- 利用者 << include >>
+予約<.ログイン :　<< include >>
+@enduml
