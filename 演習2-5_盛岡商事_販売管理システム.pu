@@ -1,6 +1,6 @@
 @startuml 例題1
 left to right direction
-actor 担当者 #ff8c00;line:Darkorange;line.bold;
+actor 担当者 #ff0000;line:Darkorange;line.bold;
 
 rectangle  ATM {
 usecase (注文商品を\nシステムで確認) as confirm
