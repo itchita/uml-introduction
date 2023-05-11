@@ -5,8 +5,7 @@ participant ":検索画面" as seach
 participant ":検索コントローラ" as control
 activate seach
 activate control
-seach ->> control: 検索情報要約（）
-note right of seach : 非同期メッセージ
+seach ->> control: ロングメッセージ（）
 control ->> control :確認
 activate control 
 deactivate control
