@@ -1,16 +1,13 @@
-@startuml abs
-hide footbox
-participant "フロア店員" as clerk
-participant "料理人" as cooker
-activate guest
-guest-->clerk:ラーメンを注文する
-activate clerk
-clerk-->cooker:料理を指示する
-activate cooker
-cooker-->cooker:料理をする
-clerk<<--cooker:ラーメン
-deactivate cooker
-deactivate clerk
-guest<<--clerk:ラーメン
-deactivate guest
+@startuml
+
+ hide footbox
+skinparam style strictuml /' 厳密なUMLに準拠する'/
+participant ":検索画面" as seach
+participant ":検索コントローラ" as control
+activate seach
+
+seach ->> control: 検索情報取得（）
+deactivate control
+note right of seach : 非同期メッセージ
+
 @enduml
