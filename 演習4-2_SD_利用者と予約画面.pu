@@ -1,7 +1,7 @@
 @startuml
 
  hide footbox
-participant ":検索画面" as seach
+participant ":ユーザーログイン" as seach
 participant ":検索コントローラ" as control
 activate seach
 activate control
