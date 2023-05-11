@@ -5,7 +5,7 @@ participant ":ユーザーログイン" as seach
 participant ":検索コントローラ" as control
 activate seach
 activate control
-seach ->> control: ロングメッセージ（）
+seach ->> control: ログインメッセージ（）
 control ->> control :確認
 activate control 
 deactivate control
