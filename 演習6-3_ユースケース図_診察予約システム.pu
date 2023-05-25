@@ -1,0 +1,20 @@
+@startuml
+left to right direction
+
+state START
+state MENU
+state RESERVATION
+state YOUR_TURN
+state CURRENT_TURN
+
+[*] --> START
+START --> MENU : メニューボタンを押す
+MENU --> RESERVATION : 予約ボタンを押す
+RESERVATION --> YOUR_TURN : 登録ボタンを押す
+RESERVATION --> YOUR_TURN : 確認ボタンを押す
+MENU <-- RESERVATION : 取消ボタンを押す
+YOUR_TURN --> MENU : メニューボタンを押す
+MENU --> CURRENT_TURN : 今の順番ボタンを押す
+MENU <-- CURRENT_TURN : メニューボタンを押す
+MENU --> [*]
+@enduml
