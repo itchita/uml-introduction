@@ -1,0 +1,16 @@
+@startuml 並列処理
+title フォークで並列処理
+start
+:具材を切る;
+fork
+:具材を炒める;
+fork
+:炒めている鍋に水を入れる;
+end fork
+:カレールーと少しのケチャップとウスターソースを入れる;
+fork again
+:ご飯をたく;
+end fork
+:盛り付けをする;
+stop
+@enduml
