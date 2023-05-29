@@ -1,0 +1,11 @@
+@startuml 注釈
+title 注釈の書き方
+start
+:野菜を洗う;
+-> 汚れを取ります;
+:野菜を切る;
+note right
+end note
+:野菜を洗う;
+stop
+@enduml
