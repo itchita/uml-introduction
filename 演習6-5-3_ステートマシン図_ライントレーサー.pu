@@ -1,0 +1,23 @@
+@startuml ライントレーサー
+left to right direction
+actor ユーザー
+actor 左右モーター
+actor 光センサー
+rectangle ライントレーサーシステム{
+usecase ラインの右の境界線上を進む
+}
+ユーザー -- ラインの右の境界線上を進む
+ラインの右の境界線上を進む -- 光センサー
+ラインの右の境界線上を進む -- 左右モーター
+@enduml （編集済み） 
+14:50
+@startuml ライントレーサー
+電源SW_OFF --> 電源SW_ON : スイッチを入れる
+電源SW_ON --> 電源SW_OFF : スイッチを切る
+state 電源SW_ON {
+    右旋回 : 右モータOFF, 左モータON
+    左旋回 : 右モータON, 左モータOFF
+    右旋回 --> 左旋回 : ラインを外れる
+    左旋回 --> 右旋回 : ラインに乗る
+}
+@enduml
